@@ -1,0 +1,83 @@
+@import '_variables.scss';
+@import '_forms.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+#app {
+    font-family: Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $font_color;
+    background-color: #F8F8F8;
+    min-height: 100vh;
+    padding-bottom: 60px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+
+    @media (max-width: 992px) {
+        padding: 0 10px;
+    }
+}
+
+img{
+    width: 100%;
+}
+
+.link {
+    text-decoration: none;
+    color: $main_color;
+}
+
+.btn {
+    color: white;
+    background: $main_color;
+    border-radius: 5px;
+    text-decoration: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+
+    &-large {
+        width: 100%;
+        height: 58px;
+        max-width: 380px;
+        margin: auto;
+        font-size: 16px;
+        letter-spacing: 0.4px;
+    }
+    &-small {
+        width: 130px;
+        height: 31px;
+        font-size: 14px;
+        color: white!important;
+    }
+
+    &:hover {
+        background-color: $main_color_ligter;
+    }
+    &:active {
+        background-color: $main_color_darkest;
+    }
+}
